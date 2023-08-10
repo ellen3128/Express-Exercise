@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Cat</h1>
+<h2>Name: <%= cats.name%></h2>
+<h2>Breed: <%= cats.breed%></h2>
+<h2>Color: <%= cats.color%></h2>
+<h2>Age: <%= cats.age%></h2>
+
+<form action="/cats/<%=cats.id%>?_method=PUT" method="POST" autocomplete="off">
+        <label> Name
+            <input type="text" name="name" value="<%=cats.name%>">
+        </label><br><br>
+        <label> Breed 
+            <select name="breed">
+                <option value="Domestic Shorthair">Domestic Shorthair</option>
+                <option value="Maine Coon">Maine Coon</option>
+                <option value="Sphynx">Sphynx</option>
+                <option value="Bengal">Bengal</option>
+                <option value="Ragdoll">Ragdoll</option>
+            </select>
+        </label><br><br>
+        <label> Color 
+            <input type="text" name="color" value="<%=cats.color%>">
+        </label><br><br>
+        <label> Age 
+            <input type="number" name="age" value="<%=cats.age%>">
+        </label><br><br>
+        <button type="submit">Add Cat</button>
+</form>
+
+
+<%- include('../partials/footer') %>

@@ -5,7 +5,8 @@ module.exports = {
     create, 
     index, 
     show, 
-    delete: deleteCat
+    delete: deleteCat, 
+    edit
 };
 
 
@@ -44,5 +45,13 @@ async function deleteCat(req, res) {
     })
     .catch(function(){
         console.log(err)
+    })
+}
+
+async function edit(req, res) {
+    const cats = await Cat.findById(req.params.id)
+    res.render('cats/edit', {
+        title: 'Edit Cat', 
+        cats
     })
 }

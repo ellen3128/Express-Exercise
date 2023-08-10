@@ -8,14 +8,19 @@ router.get("/new", catCtrl.new);
 // Index
 router.get("/", catCtrl.index);
 
-// Create 
-router.post("/", catCtrl.create);
+// Edit
+router.get("/:id/edit", catCtrl.edit);
 
 // Show
 router.get("/:id", catCtrl.show);
 
+// Create 
+router.post("/", catCtrl.create);
+
 // Delete
 router.delete("/:id", catCtrl.delete);
+
+
 
 
 module.exports = router;
