@@ -1,5 +1,25 @@
 <%- include('../partials/header') %>
 
 <h1>Cats List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Color</th>
+        <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% cats.forEach(c=>{ %>
+        <tr>
+            <td><%= c.name %></td>
+            <td><%= c.breed %></td>
+            <td><%= c.color %></td>
+            <td><%= c.age %></td>
+        </tr>
+    <% })%>
+    </tbody>
+</table>
 
 <%- include('../partials/footer') %>
