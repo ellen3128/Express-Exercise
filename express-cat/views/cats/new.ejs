@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<h1>New Cat List</h1>
+
+<label> Name
+    <input type="text" name="name">
+</label><br><br>
+<label> Breed 
+    <select name="breed">
+        <option value="Domestic Shorthair">Domestic Shorthair</option>
+        <option value="Maine Coon">Maine Coon</option>
+        <option value="Sphynx">Sphynx</option>
+        <option value="Bengal">Bengal</option>
+        <option value="Ragdoll">Ragdoll</option>
+    </select>
+</label><br><br>
+<label> Color 
+    <input type="text" name="color">
+</label><br><br>
+<label> Age 
+    <input type="number" name="age">
+</label><br><br>
+
+<button type="submit">Add Cat</button>
+
+<%- include('../partials/footer') %>
