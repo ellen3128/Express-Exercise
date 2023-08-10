@@ -2,6 +2,8 @@
 
 <h1>New Cat List</h1>
 
+<form action="/cats" method="POST">
+
 <label> Name
     <input type="text" name="name">
 </label><br><br>
@@ -22,5 +24,7 @@
 </label><br><br>
 
 <button type="submit">Add Cat</button>
+
+</form>
 
 <%- include('../partials/footer') %>
