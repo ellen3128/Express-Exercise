@@ -11,5 +11,8 @@ router.get("/", catCtrl.index);
 // Create 
 router.post("/", catCtrl.create);
 
+// Show
+router.get("/:id", catCtrl.show)
+
 
 module.exports = router;
