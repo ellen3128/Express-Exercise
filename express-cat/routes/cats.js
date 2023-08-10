@@ -12,7 +12,10 @@ router.get("/", catCtrl.index);
 router.post("/", catCtrl.create);
 
 // Show
-router.get("/:id", catCtrl.show)
+router.get("/:id", catCtrl.show);
+
+// Delete
+router.delete("/:id", catCtrl.delete);
 
 
 module.exports = router;

@@ -4,7 +4,8 @@ module.exports = {
     new: newCat,
     create, 
     index, 
-    show
+    show, 
+    delete: deleteCat
 };
 
 
@@ -33,5 +34,15 @@ async function show(req, res) {
     res.render('cats/show', {
         title: 'Cat Details', 
         cats
+    })
+}
+
+async function deleteCat(req, res) {
+    await Cat.deleteOne({_id: req.params.id})
+    .then(function() {
+        res.redirect('/cats/')
+    })
+    .catch(function(){
+        console.log(err)
     })
 }
