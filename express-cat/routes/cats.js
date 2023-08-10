@@ -20,7 +20,8 @@ router.post("/", catCtrl.create);
 // Delete
 router.delete("/:id", catCtrl.delete);
 
-
+// Update
+router.put("/", catCtrl.update);
 
 
 module.exports = router;

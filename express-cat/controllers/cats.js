@@ -6,7 +6,8 @@ module.exports = {
     index, 
     show, 
     delete: deleteCat, 
-    edit
+    edit, 
+    update
 };
 
 
@@ -54,4 +55,14 @@ async function edit(req, res) {
         title: 'Edit Cat', 
         cats
     })
+}
+
+async function update(req, res) {
+    const catData = {...req.body}
+    try {
+        await Cat.findOneAndUpdate( req.params.id, catData); 
+        res.redirect("/cats/");
+    } catch (err) {
+        res.render("cats/new", {errorMsg: err.message});
+    }
 }
