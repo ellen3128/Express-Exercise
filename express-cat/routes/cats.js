@@ -21,7 +21,6 @@ router.post("/", catCtrl.create);
 router.delete("/:id", catCtrl.delete);
 
 // Update
-router.put("/", catCtrl.update);
-
+router.put("/:id", catCtrl.update);
 
 module.exports = router;

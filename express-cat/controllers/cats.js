@@ -59,8 +59,9 @@ async function edit(req, res) {
 
 async function update(req, res) {
     const catData = {...req.body}
+    console.log(catData)
     try {
-        await Cat.findOneAndUpdate( req.params.id, catData); 
+        const cat = await Cat.findOneAndUpdate({_id: req.params.id}, catData)
         res.redirect("/cats/");
     } catch (err) {
         res.render("cats/new", {errorMsg: err.message});

@@ -6,7 +6,7 @@
 <h2>Color: <%= cats.color%></h2>
 <h2>Age: <%= cats.age%></h2>
 
-<form action="/cats/?_method=PUT" method="POST" autocomplete="off">
+<form action="/cats/<%=cats._id%>?_method=PUT" method="POST" autocomplete="off">
         <label> Name
             <input type="text" name="name" value="<%=cats.name%>">
         </label><br><br>
